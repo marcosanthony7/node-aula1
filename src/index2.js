@@ -3,8 +3,8 @@ const app = express();
 
 const port = 3000;
 
-app.use(express.json());
-// app.use(express.urlencoded()); // via form
+// app.use(express.json());
+app.use(express.urlencoded()); // via form
 
 app.get('/', (req, res) => {
   res.send('Hello Node!');
@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 */
 
 app.post('/salvar', (req, res) => {
-  let chapa = req.body.chapa1;
-  res.send('Hello Node: ' + chapa.nome);
+  let chapa = req.body.nome;
+  res.send('Hello Node 2: ' + chapa);
 });
 
 app.listen(port, () => {
