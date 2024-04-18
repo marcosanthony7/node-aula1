@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 */
 
 app.post('/salvar', (req, res) => {
-  let chapa = req.body.nome;
-  res.send('Hello Node 2: ' + chapa);
+  let nome = req.body.nome;
+  res.send('Hello Node 2: ' + nome);
 });
 
 app.listen(port, () => {
